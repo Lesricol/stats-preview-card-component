@@ -1,0 +1,48 @@
+@use '../mixins/responsive.scss' as *;
+@use '../mixins/pseudo.scss' as *;
+.card{
+    background-color: #1B1937;
+    text-align: center;
+    &__info{
+        padding: 1.9688rem;
+        @include responsive(laptop){
+           padding: 0;
+           width: 403px; 
+        }
+    }
+    &__items{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        @include responsive(laptop){
+            flex-direction: row;
+            gap: 3.9375rem;
+        }
+    }
+    &__stats{
+        display: flex;
+        flex-direction: column;
+        gap: 0.125rem;
+        
+    }
+    @include responsive(laptop){
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 5.6875rem;
+        width: 1110px;
+        text-align: left;
+    }
+}
+
+.image{
+    position: relative;
+}
+
+.image::after{
+    @include pseudo(100%, 100%){
+        background-color: var(--primary-color);
+        top: 0;
+        left: 0;
+    }
+}

@@ -1,1 +1,25 @@
+@use '../mixins/responsive.scss' as *;
+.text{
+    margin: 0 0 40px;
+    font-size: 0.9375rem;
+    line-height: 25px;
+    opacity: 75%;
+    @include responsive(laptop){
+        margin: 0 0 72px;
+    }
+}
 
+.text--bold{
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.5rem;
+    opacity: 100%;
+}
+
+.text--font{
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 0.75rem;
+    line-height: 25px;
+    letter-spacing: 1px;
+    margin: 0;
+}
